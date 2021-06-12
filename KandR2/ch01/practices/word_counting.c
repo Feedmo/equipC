@@ -21,11 +21,12 @@ int main() {
             ++nw;
             state = IN;
         }
-        // 比较该实现方式：
-        // if (state == OUT && (ch != ' ' || ch != '\t' || ch != '\n')) {
+
+        // 也可以先检测单词但会繁琐些
+        // if (state == OUT && ch != ' ' && ch != '\t' && ch != '\n') {
         //     ++nw;
         //     state = IN;
-        // } else if (ch == ' ' || ch == '\t' || ch == '\n') {
+        // } else if (state == IN && (ch == ' ' || ch == '\t' || ch == '\n')) {
         //     state = OUT;
         // }
     }
